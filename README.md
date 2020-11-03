@@ -12,7 +12,7 @@
 
 欢迎参考并且提出意见。
 
-| 章节 | 笔记 |
-| :--- | :--- |
-| 1 什么是函数式编程 | [1 什么是函数式编程](notes\chapter1.md) |
-| 2 在Scala中使用函数式编程 | [2 在Scala中使用函数式编程](notes\chapter2.md) |
+| 章节 | 笔记 | 练习 |
+| :--- | :--- |:--- |
+| 1 什么是函数式编程 | [1 什么是函数式编程](notes\chapter1.md) ||
+| 2 在Scala中使用函数式编程 | [2 在Scala中使用函数式编程](notes\chapter2.md) |[2-1](exercises/chapter2/src/Fibonacci.scala), [2-2](exercises/chapter2/src/IsSorted.scala)|
