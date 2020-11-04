@@ -44,3 +44,8 @@
 - 数据共享通常可以实现更好的性能
 
 - 函数直接使用两个参数，和通过柯里化分开两个参数下，柯里化能更好的利用类型推导。因为参数的类型信息会从左到右传递
+
+- Scala中foldLeft和foldRight其实本质上不一样。
+  - foldRight属于从内到外，而foldLeft属于从外到内
+  - 以前Scala中的foldRight不是stack安全的，因为递归调用不是尾调用(调用完之后还需要将列表连接)。所以需要用foldLeft进行reverse之后操作
+  - 但是现在是stack安全了
