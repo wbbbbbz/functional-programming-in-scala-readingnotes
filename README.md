@@ -15,4 +15,5 @@
 | 章节 | 笔记 | 练习 |
 | :--- | :--- |:--- |
 | 1 什么是函数式编程 | [1 什么是函数式编程](notes\chapter1.md) ||
-| 2 在Scala中使用函数式编程 | [2 在Scala中使用函数式编程](notes\chapter2.md) |[2-1](exercises/chapter2/src/Fibonacci.scala), [2-2](exercises/chapter2/src/IsSorted.scala)|
+| 2 在Scala中使用函数式编程 | [2 在Scala中使用函数式编程](notes\chapter2.md) |[2-1](exercises/chapter2/src/Fibonacci.scala), [2-2](exercises/chapter2/src/IsSorted.scala), [2-3](exercises/chapter2/src/Currying.scala), [2-4](exercises/chapter2/src/Currying.scala), [2-5](exercises/chapter2/src/HighOrderFunction.scala)|
+| 3 函数式数据结构 | [3 函数式数据结构](notes\chapter3.md) ||
