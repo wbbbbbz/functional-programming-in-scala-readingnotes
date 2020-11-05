@@ -17,4 +17,4 @@
 | 1 什么是函数式编程 | [1 什么是函数式编程](notes\chapter1.md) ||
 | 2 在Scala中使用函数式编程 | [2 在Scala中使用函数式编程](notes\chapter2.md) |[2-1](exercises/chapter2/src/Fibonacci.scala), [2-2](exercises/chapter2/src/IsSorted.scala), [2-3](exercises/chapter2/src/Currying.scala), [2-4](exercises/chapter2/src/Currying.scala), [2-5](exercises/chapter2/src/HighOrderFunction.scala)|
 | 3 函数式数据结构 | [3 函数式数据结构](notes\chapter3.md) |[3-2 ~ 3-6](exercises/chapter3/src/ListTail.scala), [3-9 ~ 3-15](exercises/chapter3/src/FoldRight.scala), [3-16 ~ 3-24](exercises/chapter3/src/OtherListFunction.scala)， [3-25 ~ 3-29](exercises/chapter3/src/ADT.scala) |
-| 4 不是用异常来处理错误 | [4 不是用异常来处理错误](notes\chapter4.md) | |
+| 4 不是用异常来处理错误 | [4 不是用异常来处理错误](notes\chapter4.md) | [4-1](exercises/chapter4/src/OptionDemo.scala), [4-2](exercises/chapter4/src/OptionUsageDemo.scala), [4-3](exercises/chapter4/src/OptionUsageDemo.scala), [4-4](exercises/chapter4/src/OptionUsageDemo.scala), [4-5](exercises/chapter4/src/OptionUsageDemo.scala), |
