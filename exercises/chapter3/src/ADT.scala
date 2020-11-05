@@ -15,7 +15,7 @@ object ADT {
   }
 
   def depth[A](t: Tree[A]): Int = t match {
-    case Leaf(_) => 1
+    case Leaf(_) => 0
     case Branch(l, r) => (depth(l) max depth(r)) + 1
   }
 
@@ -31,7 +31,7 @@ object ADT {
 
   def sizeViaFold[A](t: Tree[A]): Int = fold[A, Int](t)(_ => 1)(_ + _ + 1)
   def maximumViaFold(t: Tree[Int]): Int = fold[Int, Int](t)(identity)(_ max _)
-  def depthViaFold[A](t: Tree[A]): Int = fold[A, Int](t)(_ => 1)((_ + 1 max _ + 1))
+  def depthViaFold[A](t: Tree[A]): Int = fold[A, Int](t)(_ => 0)((_ + 1 max _ + 1))
   def mapViaFold[A,B](t: Tree[A])(f: A => B): Tree[B] = fold[A, Tree[B]](t)(a => Leaf(f(a)))(Branch(_, _))
 
   def main(args: Array[String]): Unit = {
