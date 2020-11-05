@@ -69,6 +69,13 @@ object OtherListFunction {
     go(a, b)(f)
   }
 
+  @annotation.tailrec
+  def hasSubsequence[A](sup: List[A], sub: List[A]): Boolean = sup match {
+    case Nil => sub == Nil
+    case _ if sup.startsWith(sub) => true
+    case _ :: t => hasSubsequence(t, sub)
+  }
+
   def main(args: Array[String]): Unit = {
     val l = List(1, 2, 3, 4, 5)
     val l2 = List(1, 2, 3, 4, 5)
@@ -82,5 +89,6 @@ object OtherListFunction {
     println(filterViaFlatMap[Int](l)(_ % 2 == 0))
     println(addPairwise(l, l2))
     println(zipWith(l, l2)(_ * _))
+    println(hasSubsequence[Int](l, List(4, 5)))
   }
 }
