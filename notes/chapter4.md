@@ -50,3 +50,30 @@
   - Option的map函数是将A=>B函数应用在Option[A]，然后返回Option[B]，也就是说map是将一个A=>B的函数转化成Option[A]=>Option[B]，所以可以定义一个lift = _ map f，用来将普通函数转换成Option函数
   - 对于函数f来说，None就映射为None，Some就应用f，所以不需要感知Option
 
+- For推导(for-comprehension)
+  - 简略函数lift的操作。自动展开一系列的flatMap和map的调用
+  ```scala
+  for{
+    aa <- a
+    bb <- b
+  } yield f(aa, bb)
+  ```
+  - yield可以使用<-符号左边的任何值，编译器就会转换为flatMap调用，然后对最后一个绑定和yield转换为map调用.
+  - 参考[scala - Confused with the for-comprehension to flatMap/Map transformation - Stack Overflow](https://stackoverflow.com/questions/14598990/confused-with-the-for-comprehension-to-flatmap-map-transformation)
+  - 参考[剖析for推导式 - 简书](https://www.jianshu.com/p/ae2a789ae937)
+  > 对于任意的for推导式，都可以使用map, flatMap, filter进行表达；而对于任意的for循环，都可以使用foreach, filter进行表达。
+
+
+## 4.4 Either数据类型
+- Option过于简单，不会告诉异常条件下发生了什么错误
+  - 只想知道是否发生了失败用Option
+  - 需要知道更多信息用Either，可以跟踪失败原因
+  - 习惯用Right表示成功，Left表示失败
+  ```scala
+  def safeDiv(x: Int, y: Int): Either[Exception, Int] = 
+  try Right(x / y)
+  catch {case e: Exception => Left(e)}
+  ```
+- Either在遇到第一个错误的时候就会报错
+  - 可以使用Scalaz中的Validation，用Seq积累错误
+  - 也可以改写为Either[List[E],_]
